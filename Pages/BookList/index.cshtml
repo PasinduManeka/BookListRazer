@@ -16,34 +16,36 @@
             <!--Check wheter books are availabale or not-->
             @if (Model.Books.Count() > 0)
             {
-                <table class="table table-bordered border">
-                    <tr>
-                        <th scope="col">
-                            <label asp-for="Books.FirstOrDefault().Name"></label>
-                        </th>
-                        <th scope="col">
-                            <label asp-for="Books.FirstOrDefault().Author"></label>
-                        </th>
-                        <th scope="col">
-                            <label>Action</label>
-                        </th>
-                    </tr>
-                    @foreach (var items in Model.Books)
-                    {
+                <div class="col-12">
+                    <table class="table table-bordered border text-center">
                         <tr>
-                            <td>
-                                @Html.DisplayFor(m => items.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(m => items.Author)
-                            </td>
-                            <td>
-                                <button class="btn btn-outline-danger">Delete</button>
-                                <a class="btn btn-outline-success">Edit</a>
-                            </td>
+                            <th scope="col">
+                                <label asp-for="Books.FirstOrDefault().Name"></label>
+                            </th>
+                            <th scope="col">
+                                <label asp-for="Books.FirstOrDefault().Author"></label>
+                            </th>
+                            <th scope="col">
+                                <label>Action</label>
+                            </th>
                         </tr>
-                    }
-                </table>
+                        @foreach (var items in Model.Books)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(m => items.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => items.Author)
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-danger">Delete</button>
+                                    <a class="btn btn-outline-success">Edit</a>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
             }
             else
             {
