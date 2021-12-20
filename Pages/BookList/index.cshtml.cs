@@ -26,6 +26,7 @@ namespace BookListRazor.Pages.BookList
         public async Task OnGet()
         {
             //set the all the books from database
+            //Async let you run mutiple tasks until it is waited
             Books = await _db.Book.ToListAsync();
         }
     }
