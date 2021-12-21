@@ -45,7 +45,10 @@
                                     @Html.DisplayFor(m => items.ISBN)
                                 </td>
                                 <td>
-                                    <button class="btn btn-outline-danger">Delete</button>
+                                    <!--Create Onclick to display a message-->
+                                    <!--If it is true redirect to the handler in the same page-->
+                                    <!--We create custom tag handler in index.cshtml-->
+                                    <button asp-page-handler="Delete" asp-route-id="@items.ID" onclick="return confirm('Are you sure you want to delete?')"  class="btn btn-outline-danger">Delete</button>
                                     <a asp-page="Edit" asp-route-id="@items.ID" class="btn btn-outline-success">Edit</a>
                                 </td>
                             </tr>

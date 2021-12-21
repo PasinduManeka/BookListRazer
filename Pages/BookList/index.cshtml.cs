@@ -29,5 +29,25 @@ namespace BookListRazor.Pages.BookList
             //Async let you run mutiple tasks until it is waited
             Books = await _db.Book.ToListAsync();
         }
+
+        public async Task<IActionResult> OnPostDelete(int id)
+        {
+            //Find the exist data from the database
+            var book = await _db.Book.FindAsync(id);
+            if (book == null)
+            {
+                return RedirectToPage("Edit");
+            }
+
+            Console.WriteLine(book);
+
+            //remove the book
+            _db.Book.Remove(book);
+
+            //Save the changes on the database
+            await _db.SaveChangesAsync();
+
+            return RedirectToPage("Index");
+        }
     }
 }
