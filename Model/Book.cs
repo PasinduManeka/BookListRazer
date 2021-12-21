@@ -11,6 +11,7 @@ namespace BookListRazor.Model
         [Key]
         public int ID { get; set; }
 
+        //Name is required
         [Required]
         public String Name { get; set; }
         public String Author { get; set; }
