@@ -35,7 +35,7 @@ namespace BookListRazor.Pages.BookList
         public async Task<IActionResult> OnPost() {
             if (ModelState.IsValid)
             {
-                //Find the exixt data from the database
+                //Find the exist data from the database
                 var BookFromDb = await _db.Book.FindAsync(Book.ID);
                 //replace the new value
                 BookFromDb.Name = Book.Name;
