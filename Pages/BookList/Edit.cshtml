@@ -7,6 +7,8 @@
 <div class="border container" style="padding:60px;">
     <div class="text-danger" asp-validation-summary="ModelOnly"></div>
     <form method="post">
+        <!--Store the ID-->
+        <input type="hidden" asp-for="Book.ID"  />
         <!--Name-->
         <div class="form-group row">
             <div class="col-3">

@@ -30,5 +30,23 @@ namespace BookListRazor.Pages.BookList
             Book = await _db.Book.FindAsync(id);
             //Console.WriteLine("ID:",id);
         }
+
+        //post handler
+        public async Task<IActionResult> OnPost() {
+            if (ModelState.IsValid)
+            {
+                //Find the exixt data from the database
+                var BookFromDb = await _db.Book.FindAsync(Book.ID);
+                //replace the new value
+                BookFromDb.Name = Book.Name;
+                BookFromDb.Author = Book.Author;
+                BookFromDb.ISBN = Book.ISBN;
+
+                //Save change on the DB
+                await _db.SaveChangesAsync();
+                return RedirectToPage("Index");
+            }
+            return Page();
+        }
     }
 }
