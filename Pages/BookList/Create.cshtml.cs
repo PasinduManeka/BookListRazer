@@ -36,7 +36,7 @@ namespace BookListRazor.Pages.BookList
                 await _db.Book.AddAsync(Book);
                 //save the changes in database
                 await _db.SaveChangesAsync();
-                return RedirectToPage("Index");
+                return RedirectToPage();
             }
             else
             {
