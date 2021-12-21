@@ -726,3 +726,4 @@ D:\Visual Studio Workspace 2\BookListRazor\bin\Debug\netcoreapp3.1\runtimes\win\
 D:\Visual Studio Workspace 2\BookListRazor\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\index.cshtml.g.cs
 D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Create.cshtml.g.cs
+D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Edit.cshtml.g.cs
