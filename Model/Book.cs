@@ -14,7 +14,9 @@ namespace BookListRazor.Model
         //Name is required
         [Required]
         public String Name { get; set; }
+        [Required]
         public String Author { get; set; }
+        [Required]
         public String ISBN { get; set; }
     }
 }
