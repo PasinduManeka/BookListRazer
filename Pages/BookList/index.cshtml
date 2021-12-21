@@ -47,8 +47,8 @@
                                 <td>
                                     <!--Create Onclick to display a message-->
                                     <!--If it is true redirect to the handler in the same page-->
-                                    <!--We create custom tag handler in index.cshtml-->
-                                    <a asp-page="Remove" asp-route-id="@items.ID" class="btn btn-outline-danger">Delete</a>
+                                    <!--We create custom tag handler in index.cshtml, But didn't work-->
+                                    <a asp-page="Remove" onclick="return confirm('Are you sure, You want to Delete? ')" asp-route-id="@items.ID" class="btn btn-outline-danger">Delete</a>
                                     <a asp-page="Edit" asp-route-id="@items.ID" class="btn btn-outline-success">Edit</a>
                                 </td>
                             </tr>
