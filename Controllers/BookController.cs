@@ -1,5 +1,6 @@
 ﻿using BookListRazor.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,9 +28,9 @@ namespace BookListRazor.Controllers
 
         //Get data
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Json(new {data = _db.Book.ToList()});
+            return Json(new {data =await  _db.Book.ToListAsync()});
         }
     }
 }
