@@ -728,3 +728,4 @@ D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\B
 D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Create.cshtml.g.cs
 D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Edit.cshtml.g.cs
 D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Remove.cshtml.g.cs
+D:\Visual Studio Workspace 2\BookListRazor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\upsert.cshtml.g.cs

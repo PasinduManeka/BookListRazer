@@ -1,0 +1,64 @@
+﻿@page
+@model BookListRazor.Pages.BookList.upsertModel
+<!--Use for update and create-->
+<br />
+<h2 class="text-info">@(Model.Book.ID != 0?"Update":"Create") Book</h2>
+
+<div class="border container" style="padding:60px;">
+    <form method="post">
+        @if (Model.Book.ID != 0)
+        {
+            <!--Store the ID-->
+            <input type="hidden" asp-for="Book.ID" />
+        }
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <!--Name-->
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.Name" class="form-control" />
+            </div>
+            <!--To display the validation error-->
+            <span class="text-danger" asp-validation-for="Book.Name"></span>
+        </div>
+        <!--Author-->
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.Author"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.Author" class="form-control" />
+            </div>
+            <!--To display the validation error-->
+            <span class="text-danger" asp-validation-for="Book.Author"></span>
+        </div>
+        <!--ISBN-->
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.ISBN"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.ISBN" class="form-control" />
+            </div>
+            <!--To display the validation error-->
+            <span class="text-danger" asp-validation-for="Book.ISBN"></span>
+        </div>
+        <!--Actions-->
+        <div class="form-group row">
+            <div class="col-3 offset-4">
+                <button type="submit" class="btn btn-outline-primary">@(Model.Book.ID != 0?"Update":"Create")</button>
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-outline-success">Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--Validation in the client side-->
+<!--Use the validationscript-->
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -25,7 +25,7 @@ function loadDataTable() {
                 "render": function (data) {
                     return `
                         <div>
-                            <a href="/BookList/Edit?id=${data}" class='btn btn-outline-info' style='cursor:pointer; width:100px;' >
+                            <a href="/BookList/upsert?id=${data}" class='btn btn-outline-info' style='cursor:pointer; width:100px;' >
                                 Edit    
                             </a>
                             <a class='btn btn-outline-danger' style='cursor:pointer; width:100px; margin-top:5px;' 

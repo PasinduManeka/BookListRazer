@@ -38,6 +38,7 @@ namespace BookListRazor.Pages.BookList
                 //Find the exist data from the database
                 var BookFromDb = await _db.Book.FindAsync(Book.ID);
                 //replace the new value
+                //This method is used to update specific or update the few properties
                 BookFromDb.Name = Book.Name;
                 BookFromDb.Author = Book.Author;
                 BookFromDb.ISBN = Book.ISBN;
